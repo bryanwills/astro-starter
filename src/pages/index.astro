@@ -1,0 +1,25 @@
+---
+import { Hero } from "@modules/Hero";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Codexcode | Homepage"
+    description="Explore professional website templates for Astro.build, Next.js, React, and many more. Create your unique website with our high-quality themes."
+>
+    <main class="page-content">
+        <Hero
+            heroType="textImage"
+            client:load
+            content={{
+                title: `This is astro starter`,
+                image: {
+                    srcLocal: "heroImg",
+                    alt: "hero section image",
+                    width: 300,
+                    height: 300,
+                },
+            }}
+        />
+    </main>
+</Layout>
