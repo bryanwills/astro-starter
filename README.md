@@ -57,10 +57,6 @@ Change links & add all your pages into sitemap.cjs to have better SEO optmalizat
 
 If you have any problems or questions, please let us know here: [Contact Form](https://www.codexcode.store/pages/contact)
 
-## 🚀 Enjoy!
-
-Hope you like this theme, if yes it will be nice if you could rate this theme here [Give us star!](https://www.codexcode.store/products/sven-personal-portfolio-template)
-
 ## Authors
 
 -   [@codexcode](https://www.codexcode.pl/)
