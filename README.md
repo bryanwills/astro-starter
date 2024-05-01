@@ -1,6 +1,11 @@
-# 🚀Agency Aestro Template Page
+# 🚀 CODEXCODE ASTRO STARTER
 
 ![Agency Aestro Template Page](/src/static/images/preview.webp)
+
+## ⚠️ How to keep good performance?
+
+If you make some changes (for example image) - make sure image is saved as .WEBP & its small! - avoid large images, because performance will drop!
+use https://tinypng.com/ to reduce you'r images
 
 ## 🚀 Static Media
 
@@ -12,21 +17,21 @@ There are 3 folders
 
 every of those folders have index.ts where you can find import / export files + for images and icons, we create special components
 
-# 🚀 Sitemap & robots.tsx
+# 💻 Sitemap & robots.tsx
 
-## IMPORTANT
+## ⚠️ IMPORTANT ⚠️
 
 Change links & add all your pages into sitemap.cjs to have better SEO optimization!
 
-search for CHANGEME in files & replace all instances
+search for ⚠️ CHANGEME ⚠️ in files & replace all instances
 
-## 🚀 Images
+## 🖼️ Images
 
 ```http
   <Image src="logo" alt="logo" width="50px" height="50px" />
 ```
 
-## 🚀 Icons
+## 🎨 Icons
 
 ```http
   <Icon iconData="home" alt="home" />
@@ -57,7 +62,7 @@ to keep code consisted use only enum Theme, to have very easy switch between lig
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 🧞 Contact & Support
+## 📞🧞 Contact & Support
 
 If you have any problems or questions, please let us know here: [Contact Form](https://www.codexcode.store/pages/contact)
 
