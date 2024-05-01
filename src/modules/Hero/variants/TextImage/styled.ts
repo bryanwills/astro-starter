@@ -1,19 +1,32 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Image } from "@static/images";
 import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
-export const TextImageStyled = styled.div`
+export const TextImageStyled = styled.div<{
+    $switchPlaces: boolean;
+}>`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     text-align: left;
 
+    align-items: center;
+
     ${MediaQuery.max("lg")} {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+    ${({ $switchPlaces }) =>
+        $switchPlaces &&
+        css`
+            > div:first-of-type {
+                order: 2;
+            }
+        `}
 `;
 
 export const TextImageFigure = styled.figure`
@@ -28,33 +41,16 @@ export const TextImageFigure = styled.figure`
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
+        border-radius: 100%;
         background: linear-gradient(
             0deg,
-            ${Theme.secondary} 0%,
-            ${Theme.violet} 100%
+            ${Theme.tertiary} 100%,
+            ${Theme.primary} 0%
         );
 
-        filter: blur(100px);
+        filter: blur(50px);
         opacity: 0.3;
         z-index: -1;
-    }
-
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: -40px;
-        width: 114%;
-        height: 20%;
-        background: ${Theme.primary};
-        z-index: 1;
-        filter: blur(20px);
-
-        ${MediaQuery.max("lg")} {
-            left: 0;
-            width: 100%;
-            bottom: 0;
-        }
     }
 `;
 
@@ -73,11 +69,11 @@ export const TextImage = styled(Image)`
 export const TextImageContent = styled.div`
     ${MediaQuery.max("lg")} {
         max-width: 490px;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0 auto;
     }
 
     h1 {
