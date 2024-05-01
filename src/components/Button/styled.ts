@@ -47,17 +47,17 @@ const PrimaryVariant = css`
 const SecondaryVariant = css`
     padding: 12px 40px;
     min-width: 150px;
-    border: 1.5px solid ${Theme.textDefault};
+    border: 1.5px solid ${Theme.tertiary};
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
     font-weight: 500;
     border-radius: 50px;
-    background: ${Theme.textDefault};
+    background: ${Theme.tertiary};
     color: ${Theme.primary};
 
     &:hover {
         background: transparent;
-        color: ${Theme.textDefault};
+        color: ${Theme.tertiary};
     }
 `;
