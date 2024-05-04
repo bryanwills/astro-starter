@@ -11,8 +11,9 @@ export const ContentSection: FC<ContentSectionProps> = ({
     ...rest
 }) => {
     // do not render if there are no elements
-    if (!children) return null;
-
+    if (!children) {
+        return null;
+    }
     return (
         <S.ContentSectionStyled {...rest}>
             <Container>

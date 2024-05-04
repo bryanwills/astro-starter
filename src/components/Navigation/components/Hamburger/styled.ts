@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { Colors, Theme } from "@styles/colors";
+import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
 export const HamburgerMenuButton = styled.button<{
@@ -9,30 +9,23 @@ export const HamburgerMenuButton = styled.button<{
     position: relative;
     z-index: 3;
 
-    background: ${Theme.textDefault};
+    background: ${Theme.primary};
     border-radius: 50%;
     cursor: pointer;
     transition: background 0.3s, border-color 0.3s, color 0.3s;
-
-    border: 1px solid ${Colors.white};
     width: 45px;
     height: 45px;
+    border-color: transparent;
 
     ${MediaQuery.min("lg")} {
         display: none;
     }
-
-    ${({ $open }) =>
-        $open &&
-        css`
-            border-color: transparent;
-        `}
 `;
 
 export const HamburgerMenuButtonLine = styled.span<{
     $open: boolean;
 }>`
-    background: ${Theme.primary};
+    background: ${Theme.secondary};
     position: absolute;
     left: 50%;
     display: block;

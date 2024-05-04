@@ -1,18 +1,24 @@
+import { Container } from "@components/Container";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Image } from "@static/images";
 import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
-export const TextImageStyled = styled.div<{
+export const TextImageStyled = styled.div`
+    width: 100%;
+    text-align: left;
+    margin: 50px 0;
+    align-items: center;
+    background: ${Theme.primary};
+`;
+
+export const TextImageContainer = styled(Container)<{
     $switchPlaces: boolean;
 }>`
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    text-align: left;
-
     align-items: center;
 
     ${MediaQuery.max("lg")} {
@@ -32,26 +38,6 @@ export const TextImageStyled = styled.div<{
 export const TextImageFigure = styled.figure`
     width: 100%;
     position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        background: linear-gradient(
-            0deg,
-            ${Theme.tertiary} 100%,
-            ${Theme.primary} 0%
-        );
-
-        filter: blur(50px);
-        opacity: 0.3;
-        z-index: -1;
-    }
 `;
 
 export const TextImage = styled(Image)`

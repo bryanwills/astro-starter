@@ -29,17 +29,17 @@ export const Button = ButtonLink.withComponent("button");
 const PrimaryVariant = css`
     padding: 12px 40px;
     min-width: 150px;
-    border: 1.5px solid ${Theme.textDefault};
+    border: 1.5px solid ${Theme.secondary};
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
     font-weight: 500;
     border-radius: 50px;
     background: transparent;
-    color: ${Theme.textDefault};
+    color: ${Theme.secondary};
 
     &:hover {
-        background: ${Theme.textDefault};
+        background: ${Theme.secondary};
         color: ${Theme.primary};
     }
 `;

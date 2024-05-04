@@ -24,8 +24,8 @@ export const NavigationListWrapper = styled.nav<{
         top: 0;
         right: -100%;
 
-        background: ${Theme.bgElement};
-        height: 100vh;
+        background: ${Theme.secondary};
+        height: 100dvh;
         z-index: 2;
         transform: translateX(100%);
         transition: transform 0.3s linear, right 0.7s;
@@ -68,38 +68,22 @@ export const NavigationList = styled.ul`
 
     > li a {
         text-decoration: none;
-        color: ${Theme.textDefault};
+        color: ${Theme.secondary};
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 20px;
+        line-height: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         padding: 10px;
         border-radius: 5px;
         background-color: transparent;
         cursor: pointer;
-        transition: background-color 0.2s linear;
+        transition: background-color 0.3s, color 0.3s;
 
         ${MediaQuery.max("lg")} {
             padding: 10px 20px;
-        }
-
-        &:hover {
-            background-color: ${Theme.secondary};
-        }
-
-        &.active:not(:hover) {
-            background-color: ${Theme.textDefault};
-            color: ${Theme.primary};
-        }
-
-        &.active-shop:not(:hover) {
-            background-color: ${Theme.violet};
-            color: ${Theme.textDefault};
-        }
-
-        &.active-shop {
-            min-width: 80px;
         }
 
         img {

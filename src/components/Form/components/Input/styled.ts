@@ -10,10 +10,10 @@ const defaultInputStyles = css`
     margin-bottom: 10px;
     box-sizing: border-box;
     background: transparent;
-    border-bottom: 1px solid ${Theme.textSecondary};
+    border-bottom: 1px solid ${Theme.secondary};
     transition: border-color 0.3s;
     letter-spacing: 1px;
-    color: ${Theme.textDefault};
+    color: ${Theme.secondary};
     margin: 30px 0;
 
     ${MediaQuery.max("lg")} {
@@ -23,11 +23,11 @@ const defaultInputStyles = css`
     &:focus,
     &:active {
         outline: none;
-        border-color: ${Theme.violet};
+        border-color: ${Theme.tertiary};
     }
 
     &::placeholder {
-        color: ${Theme.textSecondary};
+        color: ${Theme.secondary};
     }
 `;
 

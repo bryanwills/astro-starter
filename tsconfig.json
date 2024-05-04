@@ -14,6 +14,7 @@
         "@static/*": ["static/*"],
         "@utils/*": ["utils/*"],
         "@data/*": ["data/*"],
+        "@content/*": ["content/*"],
     }
   }
 }

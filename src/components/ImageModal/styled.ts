@@ -36,7 +36,7 @@ export const ImageModalContainer = styled.div`
     padding: 90px 0;
     margin: 0 auto;
     padding: 40px;
-    background-color: ${Theme.bgElement};
+    background-color: ${Theme.primary};
     max-height: 75vh;
     overflow: auto;
     height: 100%;
@@ -46,7 +46,7 @@ export const ImageModalContainer = styled.div`
     }
 
     &::-webkit-scrollbar {
-        background-color: ${Theme.bgElement};
+        background-color: ${Theme.primary};
         width: 9px;
     }
 
@@ -102,7 +102,7 @@ export const ImageModalLinks = styled.div`
         display: inline-block;
 
         font-size: 20px;
-        color: ${Theme.textDefault};
+        color: ${Theme.secondary};
 
         &:after {
             content: "";

@@ -7,7 +7,7 @@ import { MediaQuery } from "@styles/mediaQuery";
  */
 export const FormStyled = styled.form`
     padding: 30px;
-    background: ${Theme.bgElement};
+    background: ${Theme.primary};
     border-radius: 10px;
     box-shadow: 0 0 30px #bc52ee7a;
     width: 100%;

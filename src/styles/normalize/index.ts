@@ -31,7 +31,7 @@ export const NormalizeCSS = css`
     body {
         margin: 0;
 
-        color: ${Theme.textDefault};
+        color: ${Theme.secondary};
         background: ${Theme.primary};
 
         &::-webkit-scrollbar {
@@ -183,7 +183,6 @@ export const NormalizeCSS = css`
         font-size: 16px;
         line-height: 25px;
         letter-spacing: 1px;
-        color: ${Theme.textSecondary};
 
         &:last-child {
             margin: 0;

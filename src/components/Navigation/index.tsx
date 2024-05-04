@@ -3,6 +3,7 @@ import { useState, type FC } from "react";
 import { Hamburger } from "./components/Hamburger";
 
 export const Navigation: FC = () => {
+    // to update values for all components, keep the state here
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -10,34 +11,16 @@ export const Navigation: FC = () => {
             <S.NavigationListWrapper $isOpen={isOpen}>
                 <S.NavigationList>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/">Link 1</a>
                     </li>
                     <li>
-                        <a
-                            href="https://www.codexcode.store/"
-                            className="active-shop"
-                        >
-                            Shop
-                        </a>
+                        <a href="/">Link 2</a>
                     </li>
                     <li>
-                        <a
-                            href="https://www.codexcode.store/collections/all-themes"
-                            className="active"
-                        >
-                            Themes
-                        </a>
+                        <a href="/">Link 3</a>
                     </li>
                     <li>
-                        <a href="/web-development">Web development</a>
-                    </li>
-                    <li>
-                        <a href="/about">About us</a>
-                    </li>
-                    <li>
-                        <a href="https://www.codexcode.store/pages/contact">
-                            Contact
-                        </a>
+                        <a href="/">link 4</a>
                     </li>
                 </S.NavigationList>
             </S.NavigationListWrapper>

@@ -48,38 +48,42 @@ export const TextImage: FC<TextImageProps> = ({
             )
         );
     return (
-        <S.TextImageStyled $switchPlaces={switchPlaces}>
-            <FadeIn delay={0.2}>
-                <S.TextImageContent>
-                    {title && (
-                        <h1 dangerouslySetInnerHTML={{ __html: title }} />
-                    )}
-                    {paragraph && (
-                        <p dangerouslySetInnerHTML={{ __html: paragraph }} />
-                    )}
+        <S.TextImageStyled>
+            <S.TextImageContainer $switchPlaces={switchPlaces}>
+                <FadeIn delay={0.2}>
+                    <S.TextImageContent>
+                        {title && (
+                            <h1 dangerouslySetInnerHTML={{ __html: title }} />
+                        )}
+                        {paragraph && (
+                            <p
+                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                            />
+                        )}
 
-                    {buttons && buttons.length > 0 && (
-                        <S.ButtonsWrapper>
-                            {buttons.map((button, index) => {
-                                return (
-                                    <Button
-                                        key={index}
-                                        link={button.link}
-                                        variant={button.variant}
-                                    >
-                                        {button.text}
-                                    </Button>
-                                );
-                            })}
-                        </S.ButtonsWrapper>
-                    )}
-                </S.TextImageContent>
-            </FadeIn>
-            {image && (
-                <FadeIn>
-                    <S.TextImageFigure>{displayImage}</S.TextImageFigure>
+                        {buttons && buttons.length > 0 && (
+                            <S.ButtonsWrapper>
+                                {buttons.map((button, index) => {
+                                    return (
+                                        <Button
+                                            key={index}
+                                            link={button.link}
+                                            variant={button.variant}
+                                        >
+                                            {button.text}
+                                        </Button>
+                                    );
+                                })}
+                            </S.ButtonsWrapper>
+                        )}
+                    </S.TextImageContent>
                 </FadeIn>
-            )}
+                {image && (
+                    <FadeIn>
+                        <S.TextImageFigure>{displayImage}</S.TextImageFigure>
+                    </FadeIn>
+                )}
+            </S.TextImageContainer>
         </S.TextImageStyled>
     );
 };

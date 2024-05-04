@@ -5,7 +5,7 @@ import { MediaQuery } from "@styles/mediaQuery";
 export const FooterStyled = styled.footer`
     width: 100%;
 
-    background: ${Theme.bgElement};
+    background: ${Theme.secondary};
 
     box-shadow: 0 0 10px rgb(123 123 123 / 10%);
     padding: 50px 0;

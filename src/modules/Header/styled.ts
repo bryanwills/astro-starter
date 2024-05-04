@@ -1,23 +1,9 @@
-import { Container } from "@components/Container";
-import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import { Theme } from "@styles/colors";
-
-const HeaderAnimationKeyframe = keyframes`
-    from {
-        transform: translateY(-50px);
-        opacity: 0.01;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-`;
+import { MediaQuery } from "@styles/mediaQuery";
+import { FadeInKeyframes } from "@utils/animations/styled";
 
 export const HeaderStyled = styled.header`
     width: 100%;
-
-    background: ${Theme.bgElement};
 
     padding: 20px 0;
 
@@ -28,19 +14,28 @@ export const HeaderStyled = styled.header`
 
     gap: 40px;
 
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
 
-    box-shadow: 0 0 10px rgb(123 123 123 / 10%);
+    animation: ${FadeInKeyframes} 1s;
+    animation-delay: 0.4s;
+    transition: background 0.5s;
 
-    animation: ${HeaderAnimationKeyframe} 1s;
+    &.scrolled {
+        background: rgba(0, 0, 0, 0.8);
+    }
 `;
 
-export const ContainerStyled = styled(Container)`
+export const ContainerStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    width: 100%;
+    padding: 0 40px;
+
+    ${MediaQuery.max("lg")} {
+        padding: 0 20px;
+    }
 `;

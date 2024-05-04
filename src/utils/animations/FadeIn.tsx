@@ -6,6 +6,13 @@ type FadeInProps = {
     delay?: number | string;
 };
 
+/**
+ * Convert delay to seconds
+ */
+const convertToSeconds = (delay: number | string) => {
+    return Number(delay) * 1000;
+};
+
 export const FadeIn: FC<FadeInProps> = ({ children, delay }) => {
     const elementRef = useRef(null);
 
@@ -14,9 +21,9 @@ export const FadeIn: FC<FadeInProps> = ({ children, delay }) => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    } else {
-                        entry.target.classList.remove("visible");
+                        setTimeout(() => {
+                            entry.target.classList.add("visible");
+                        }, convertToSeconds(delay ? delay : 0));
                     }
                 });
             },

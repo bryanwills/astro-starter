@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Theme } from "@styles/colors";
 import { MediaQuery } from "@styles/mediaQuery";
 
 export const ContentSectionStyled = styled.section`
@@ -28,25 +27,6 @@ export const ContentSectionWrapper = styled.div`
         align-items: center;
 
         position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                0deg,
-                ${Theme.secondary} 0%,
-                ${Theme.violet} 100%
-            );
-
-            filter: blur(100px);
-            opacity: 0.3;
-            z-index: -1;
-        }
 
         &,
         img {
