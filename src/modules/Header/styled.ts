@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { MediaQuery } from "@styles/mediaQuery";
-import { FadeInKeyframes } from "@utils/animations/styled";
 
 export const HeaderStyled = styled.header`
     width: 100%;
@@ -18,10 +17,6 @@ export const HeaderStyled = styled.header`
     top: 0;
     left: 0;
     z-index: 10;
-
-    animation: ${FadeInKeyframes} 1s;
-    animation-delay: 0.4s;
-    transition: background 0.5s;
 
     &.scrolled {
         background: rgba(0, 0, 0, 0.8);

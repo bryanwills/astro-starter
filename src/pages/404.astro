@@ -1,7 +1,6 @@
 ---
 import { ContentSection } from "@modules/ContentSection";
 import Layout from "../layouts/Layout.astro";
-import { FadeIn } from "@utils/animations/FadeIn";
 import { Button } from "@components/Button";
 ---
 
@@ -21,17 +20,15 @@ import { Button } from "@components/Button";
                 alignItems: "center",
             }}
         >
-            <FadeIn client:visible>
-                <h1>Wooops - Sorry! 404</h1>
-                <p>
-                    The page you are looking for might have been removed, had
-                    its name changed, or is temporarily unavailable.
-                </p>
+            <h1>Wooops - Sorry! 404</h1>
+            <p>
+                The page you are looking for might have been removed, had its
+                name changed, or is temporarily unavailable.
+            </p>
 
-                <Button variant="secondary" link="/" align="center">
-                    Go back
-                </Button>
-            </FadeIn>
+            <Button variant="secondary" link="/" align="center">
+                Go back
+            </Button>
         </ContentSection>
     </main>
 </Layout>

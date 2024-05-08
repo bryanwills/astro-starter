@@ -51,5 +51,12 @@ const { title, description } = Astro.props;
         <Header client:load />
         <slot />
         <Footer client:visible />
+        <style is:global>
+            /* Improve Page speed */
+            /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+            img {
+                content-visibility: auto;
+            }
+        </style>
     </body>
 </html>

@@ -9,7 +9,8 @@ export const SwiperStyled = styled(Swiper)<{
     width: 100%;
 
     .swiper-wrapper {
-        transition-timing-function: linear;
+        // use this only if you have full with slider autoplay enabled
+        /* transition-timing-function: linear; */
 
         display: flex;
     }

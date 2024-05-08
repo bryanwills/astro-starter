@@ -1,7 +1,6 @@
 import React, { type FC, useState, useEffect, useRef } from "react";
 import * as S from "./styled";
 import { Image } from "@static/images";
-import { FadeIn } from "@utils/animations/FadeIn";
 
 type ImageModalProps = {
     image: {
@@ -80,20 +79,18 @@ export const ImageModal: FC<ImageModalProps> = ({
 
     return (
         <S.ImageModalStyled>
-            <FadeIn>
-                <S.ImagePreview
-                    aria-label="open modal"
-                    onClick={handleOpen}
-                    className="modal-opener"
-                >
-                    <Image
-                        src={image.src}
-                        alt={image.alt}
-                        width={image.width}
-                        height={image.height}
-                    />
-                </S.ImagePreview>
-            </FadeIn>
+            <S.ImagePreview
+                aria-label="open modal"
+                onClick={handleOpen}
+                className="modal-opener"
+            >
+                <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                />
+            </S.ImagePreview>
             <S.ImageModalContent $isOpen={open} ref={modalRef}>
                 <S.ImageModalContainer className="modal-content">
                     <S.ImageModalImage>
