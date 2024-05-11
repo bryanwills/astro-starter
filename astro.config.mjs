@@ -31,7 +31,7 @@ export default defineConfig({
                 //     item.priority = 0.9;
                 // }
 
-                // if you want to change piority of all subpages like "/posts/*", you can use:
+                // if you want to change priority of all subpages like "/posts/*", you can use:
                 // if (/\/posts\//.test(item.url)) {
                 //     item.priority = 0.7;
                 // }
