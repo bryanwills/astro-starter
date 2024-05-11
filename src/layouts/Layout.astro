@@ -9,7 +9,7 @@ import MetaConfig from "./MetaConfig.astro";
 interface Props {
     title: string;
     description: string;
-    overwritePreview?: ImageMetadata;
+    overwritePreview?: string;
 }
 
 const { title, description, overwritePreview } = Astro.props;
@@ -21,9 +21,7 @@ const { title, description, overwritePreview } = Astro.props;
         <MetaConfig
             title={title}
             description={description}
-            preview={overwritePreview?.src
-                ? overwritePreview.src
-                : PreviewPng.src}
+            preview={overwritePreview ? overwritePreview : PreviewPng.src}
         />
         <title>{title}</title>
 
