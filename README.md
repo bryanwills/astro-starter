@@ -15,7 +15,9 @@ Static media (not for single posts ect)
 There are 3 folders
 
 -   fonts - setup there you'r all fonts - you don't want to get link to google - this can slow down you'r page, but if you needed, you can delete it and use google tags
+
 -   images - Images are setup with typescript, so this component is easy to use & when you import image there you don't need to worry about use import for every single image
+
 -   icons - Right now we don't have solution to import SVGA files into React with Astro, so its working the same as Images
 
 ### 🖼️ Images
@@ -44,8 +46,10 @@ Use those components for media to keep best performance or in astro files use im
 ## ⚠️ IMPORTANT ⚠️
 
 1. Go to astro.config.mjs & change the ⚠️ siteURL ⚠️ replace url with you'r domain https
+
 2. search for ⚠️ CHANGEME ⚠️ in files & replace all instances
-3. Seo: search for⚠️ YOUR META DESCRIPTION FOR SEO ⚠️ and change this with your meta description of page - do the same for all you'r pages
+
+3. Seo: search for ⚠️ YOUR META DESCRIPTION FOR SEO ⚠️ and change this with your meta description of page - do the same for all you'r pages
 
 SITEMAP: Sitemap is created by astro, but you need yo configure it a little bit
 
