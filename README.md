@@ -4,10 +4,14 @@
 [<img src="/src/static/images/link-live.png">](https://www.codexcode.store/)
 [<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/pages/contact)
 
+
+
 ## ⚠️ How to keep good performance?
 
 If you make some changes (for example image) - make sure image is saved as .WEBP & its small! - avoid large images, because performance will drop!
 use https://tinypng.com/ to reduce you'r images
+
+
 
 ## 🚀 Static Media
 
@@ -20,7 +24,7 @@ There are 3 folders
 
 -   icons - Right now we don't have solution to import SVGA files into React with Astro, so its working the same as Images
 
-### 🖼️ Images
+#### 🖼️ Images
 
 Images can be stored in static/images and use it with srcLocal (typescript will give you types),
 also Image component can be display with "custom" link - use src instead of scrLocal:
@@ -31,7 +35,7 @@ also Image component can be display with "custom" link - use src instead of scrL
 
 To register new image check the images object and add image there
 
-### 🎨 Icons
+#### 🎨 Icons
 
 icons are stored in static/icons and use it with iconData (typescript will give you types)
 
@@ -40,6 +44,8 @@ icons are stored in static/icons and use it with iconData (typescript will give 
 ```
 
 Use those components for media to keep best performance or in astro files use images from astro - also good!
+
+
 
 # 💻 Sitemap & robots.tsx & SEO
 
@@ -56,6 +62,8 @@ SITEMAP: Sitemap is created by astro, but you need yo configure it a little bit
 1. Go to astro.config.mjs
 2. check how sitemap data is added (when you need more customization, check the commented lines)
 
+
+
 ## 📞 Contact Form
 
 If project contains Contact form
@@ -69,6 +77,8 @@ Other solution: If you want to add other solution, then change axios request wit
     template_id: "template_TEMPLATE_ID",
     user_id: "USER_ID",
 ```
+
+
 
 ## 🚀 Styles
 
@@ -97,9 +107,13 @@ MediaQuery can be used with MIN & MAX OR BETWEEN - that means code will display 
     }
 ```
 
+
+
 ## 🚀 Theme colors
 
 All colors are used as css var to have easier access in app
+
+
 
 ## ⚠️ Tailwind
 
@@ -115,6 +129,8 @@ npx tailwindcss -i ./src/styles/tailwind/tailwind.css -o ./src/styles/tailwind/t
 
 delete --watch if you dont need to watch you'r css files all time
 
+
+
 ## 🧞 Commands
 
 #### All commands are run from the root of the project, from a terminal:
@@ -128,10 +144,14 @@ delete --watch if you dont need to watch you'r css files all time
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+
+
 ## 📞🧞 Contact & Support
 
 If you bought our theme, you get 100% our support!
 have any problems or questions, please let us know here: [Contact Form](https://www.codexcode.store/pages/contact)
+
+
 
 ## 🧞 Authors
 
