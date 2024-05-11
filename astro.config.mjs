@@ -14,7 +14,6 @@ export default defineConfig({
         react(),
         sitemap({
             serialize(item) {
-                console.log(item);
                 // Default values for pages
                 item.priority = siteUrl + "/" === item.url ? 1.0 : 0.9;
                 item.changefreq = "weekly";
@@ -24,12 +23,17 @@ export default defineConfig({
                 // if (/exclude-from-sitemap/.test(item.url)) {
                 //     return undefined;
                 // }
-                
+
                 // if any page needs a different priority, changefreq, or lastmod, uncomment the following lines and adjust as needed
                 // if (/test-sitemap/.test(item.url)) {
                 //     item.changefreq = "daily";
                 //     item.lastmod = date;
                 //     item.priority = 0.9;
+                // }
+
+                // if you want to change piority of all subpages like "/posts/*", you can use:
+                // if (/\/posts\//.test(item.url)) {
+                //     item.priority = 0.7;
                 // }
                 return item;
             },
