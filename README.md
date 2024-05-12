@@ -14,7 +14,7 @@ Astro.build + React + Emotion + custom variables
 
 **Tailwind** - Tailwind is great, this give us faster coding results that using only CSS-IN-JS, Its great, but like others tools, it have his own limits & thats why we use **Emotions**
 
-**Emotion** is a performant and flexible CSS-in-JS library, which lets you write CSS styles with JavaScript - This with Emotions alows us to create everything in minutes - reason why we using emotions with Tailwind is simple, when you have more "difficult" block to write, its better to split some code between **Emotions** & **Tailwind**
+**Emotion** is a performant and flexible CSS-in-JS library, which lets you write CSS styles with JavaScript - This with Emotions allows us to create everything in minutes - reason why we using emotions with Tailwind is simple, when you have more "difficult" block to write, its better to split some code between **Emotions** & **Tailwind**
 
 ## ⚠️ How to keep good performance?
 
@@ -44,11 +44,11 @@ If you make modifications, such as adding an image, ensure that the image is sav
 
 also you can check if there is any CHANGEME or YOUR META DESCRIPTION FOR SEO - if yes, then you want to change it
 
-**Sitemap** is generatet automaticly from astro.config file.
+**Sitemap** is generated automatically from astro.config file.
 
-**Astro.config.mjs** There you can find example useage of sitemap, we add comments with if statments for varius scenario, so check it & use it as you like!
+**Astro.config.mjs** There you can find example usage of sitemap, we add comments with if statements for various scenario, so check it & use it as you like!
 
-**Robots** - Also its generated automaticly.
+**Robots** - Also its generated automatically.
 
 ## 📞 Contact Form
 
@@ -68,7 +68,7 @@ Other solution: If you want to add other solution, then change axios request wit
 
 All global styles like, colors, fonts, normalize or things like mediaQuery are stored in styles folder,
 
-With **Emotions** We create a MediaQuery function that alows us to create mobile styling easly.
+With **Emotions** We create a MediaQuery function that allows us to create mobile styling easily.
 MediaQuery can be used with MIN & MAX OR BETWEEN - that means code will display depends on what we need to do:
 
 ```
