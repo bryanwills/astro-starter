@@ -11,6 +11,14 @@ import {
  * and use it as a prop in the component
  * this way we can avoid passing wrong props
  * and also we can have a better understanding of the component
+ * if there will be more types
+ *
+ * @example
+ * type HeroProps = |{
+ *  heroType: "center";
+ *  } | {...another}
+ *
+ * | is important here, it is used to define the type
  */
 type HeroProps = {
     heroType: "center";

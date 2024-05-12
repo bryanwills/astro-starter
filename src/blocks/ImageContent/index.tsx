@@ -1,5 +1,4 @@
 import { Container } from "@components/Container";
-import { Icon } from "@static/icons";
 import { Image, type ImageProps } from "@static/images";
 import { type FC } from "react";
 
