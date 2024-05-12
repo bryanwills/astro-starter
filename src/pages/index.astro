@@ -1,21 +1,28 @@
 ---
-import { Hero } from "@modules/Hero";
+import { Hero } from "@blocks/Hero";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="CHANGEME" description="YOUR META DESCRIPTION FOR SEO">
     <main class="page-content">
         <Hero
-            heroType="textImage"
-            client:load
+            heroType="center"
             data={{
                 title: `This is astro starter`,
-                image: {
-                    srcLocal: "heroImg",
-                    alt: "hero section image",
-                    width: 300,
-                    height: 300,
-                },
+                description: `This is a starter template for Astro`,
+                image: "heroImg",
+                buttons: [
+                    {
+                        text: "Get Started",
+                        link: "/",
+                        variant: "primary",
+                    },
+                    {
+                        text: "Learn More",
+                        link: "/",
+                        variant: "secondary",
+                    },
+                ],
             }}
         />
     </main>

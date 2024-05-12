@@ -5,16 +5,14 @@ import { Container } from "@components/Container";
 
 export const Footer: FC = () => {
     return (
-        <S.FooterStyled>
+        <footer className="py-12 md:py-16 border-t border-tertiary border-opacity-50">
             <Container>
-                <S.FooterContainer>
-                    <Logo />
-
-                    <S.FooterContent>
-                        <p>© 2024 All rights reserved by codexcode.pl</p>
-                    </S.FooterContent>
-                </S.FooterContainer>
+                <div className="md:flex md:items-center md:justify-between">
+                    <div className="text-primary opacity-50 text-sm mr-4">
+                        &copy; trail-landing.com. All rights reserved.
+                    </div>
+                </div>
             </Container>
-        </S.FooterStyled>
+        </footer>
     );
 };

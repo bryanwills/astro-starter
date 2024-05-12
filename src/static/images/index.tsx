@@ -9,7 +9,7 @@ export const images = {
     logo: Logo,
 };
 
-export type ImageProps = {
+export type ImageProps = React.ImgHTMLAttributes<HTMLElement> & {
     srcLocal?: keyof typeof images;
     src?: string;
     alt: string;

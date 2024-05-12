@@ -15,6 +15,7 @@
         "@utils/*": ["utils/*"],
         "@data/*": ["data/*"],
         "@content/*": ["content/*"],
+        "@blocks/*": ["blocks/*"],
     }
   }
 }

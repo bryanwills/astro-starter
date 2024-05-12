@@ -1,5 +1,5 @@
 ---
-import { ContentSection } from "@modules/ContentSection";
+import { ContentSection } from "@blocks/ContentSection";
 import Layout from "../layouts/Layout.astro";
 import { Button } from "@components/Button";
 ---
@@ -9,26 +9,14 @@ import { Button } from "@components/Button";
     description="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
 >
     <main class="page-content">
-        <ContentSection
-            style={{
-                maxWidth: "600px",
-                margin: "0 auto",
-                textAlign: "center",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
+        <ContentSection>
             <h1>Wooops - Sorry! 404</h1>
             <p>
                 The page you are looking for might have been removed, had its
                 name changed, or is temporarily unavailable.
             </p>
 
-            <Button variant="secondary" link="/" align="center">
-                Go back
-            </Button>
+            <Button variant="primary" link="/" align="center"> Go back </Button>
         </ContentSection>
     </main>
 </Layout>

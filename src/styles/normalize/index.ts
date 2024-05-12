@@ -16,7 +16,7 @@ export const NormalizeCSS = css`
         font-family: ${Fonts.primary};
         font-weight: 400;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.2;
     }
 
     * {
@@ -31,8 +31,7 @@ export const NormalizeCSS = css`
     body {
         margin: 0;
 
-        color: ${Theme.secondary};
-        background: ${Theme.primary};
+        color: ${Theme.primary};
 
         &::-webkit-scrollbar {
             width: 17px;
@@ -44,7 +43,7 @@ export const NormalizeCSS = css`
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #ee82ee5c;
+            background-color: #1b4273;
         }
     }
 
@@ -111,34 +110,20 @@ export const NormalizeCSS = css`
         color: inherit;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin: 0 0 30px;
-
-        &:last-child {
-            margin: 0;
-        }
-    }
-
     h1 {
-        font-size: 50px;
+        font-size: 60px;
         line-height: 1.2;
 
         ${MediaQuery.max("lg")} {
-            font-size: 40px;
+            font-size: 45px;
         }
     }
 
     h2 {
-        font-size: 45px;
+        font-size: 60px;
         line-height: 1.2;
-
         ${MediaQuery.max("lg")} {
-            font-size: 35px;
+            font-size: 40px;
         }
     }
 
@@ -147,7 +132,7 @@ export const NormalizeCSS = css`
         line-height: 1.2;
 
         ${MediaQuery.max("lg")} {
-            font-size: 30px;
+            font-size: 25px;
         }
     }
 
@@ -156,7 +141,7 @@ export const NormalizeCSS = css`
         line-height: 1.2;
 
         ${MediaQuery.max("lg")} {
-            font-size: 25px;
+            font-size: 18px;
         }
     }
 
@@ -165,7 +150,7 @@ export const NormalizeCSS = css`
         line-height: 1.2;
 
         ${MediaQuery.max("lg")} {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
@@ -174,18 +159,17 @@ export const NormalizeCSS = css`
         line-height: 1.2;
 
         ${MediaQuery.max("lg")} {
-            font-size: 15px;
+            font-size: 16px;
         }
     }
 
     p {
-        margin: 0 0 10px;
-        font-size: 16px;
-        line-height: 25px;
-        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 24px;
 
-        &:last-child {
-            margin: 0;
+        ${MediaQuery.max("lg")} {
+            font-size: 16px;
+            line-height: 20px;
         }
     }
 `;

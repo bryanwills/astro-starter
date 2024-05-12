@@ -1,10 +1,9 @@
 import { type FC } from "react";
-import * as S from "./styled";
+
 import {
     CenterText,
     type CenterTextProps,
 } from "./variants/CenterText/CenterText";
-import { TextImage, type TextImageProps } from "./variants/TextImage/TextImage";
 
 /**
  * to avoid passing wrong props to the component
@@ -13,15 +12,10 @@ import { TextImage, type TextImageProps } from "./variants/TextImage/TextImage";
  * this way we can avoid passing wrong props
  * and also we can have a better understanding of the component
  */
-type HeroProps =
-    | {
-          heroType: "center";
-          data: CenterTextProps;
-      }
-    | {
-          heroType: "textImage";
-          data: TextImageProps;
-      };
+type HeroProps = {
+    heroType: "center";
+    data: CenterTextProps;
+};
 
 export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
     /*
@@ -40,23 +34,9 @@ export const Hero: FC<HeroProps> = ({ heroType, data, ...rest }) => {
                 <CenterText {...(data as CenterTextProps)} {...rest} />
             );
             break;
-        case "textImage":
-            HeroTypeOutput = (
-                <TextImage {...(data as TextImageProps)} {...rest} />
-            );
-            break;
     }
 
-    /**
-     * if any of hero types need to be full width,  make check here with boolean
-     * like:
-     * const isFullWidth = heroType === "center" ? true : false;
-     */
-    const isFullWidth = false;
-
     return (
-        <S.HeroWrapper $isFullWidth={isFullWidth}>
-            {HeroTypeOutput}
-        </S.HeroWrapper>
+        <div className="flex items-center justify-center">{HeroTypeOutput}</div>
     );
 };

@@ -2,6 +2,8 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
+import svgr from "vite-plugin-svgr";
+import tailwind from "@astrojs/tailwind";
 
 export const siteUrl = "https://codexcode.store";
 
@@ -12,6 +14,7 @@ export default defineConfig({
 
     integrations: [
         react(),
+        svgr(),
         sitemap({
             serialize(item) {
                 // Default values for pages
@@ -38,11 +41,14 @@ export default defineConfig({
                 return item;
             },
         }),
+        tailwind({
+            configFile: "./tailwind.config.js",
+        }),
     ],
     renderers: ["@astrojs/renderer-react"],
     prerender: true,
     vite: {
-        plugins: [CompressionPlugin()],
+        plugins: [CompressionPlugin(), svgr()],
     },
     buildOptions: {
         minify: true,

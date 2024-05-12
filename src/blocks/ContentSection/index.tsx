@@ -1,5 +1,4 @@
 import { Container } from "@components/Container";
-import * as S from "./styled";
 import { type FC } from "react";
 
 type ContentSectionProps = React.HTMLAttributes<HTMLElement> & {
@@ -15,10 +14,12 @@ export const ContentSection: FC<ContentSectionProps> = ({
         return null;
     }
     return (
-        <S.ContentSectionStyled {...rest}>
+        <section className="mt-32 md:mt-40 md:mb-16" {...rest}>
             <Container>
-                <S.ContentSectionWrapper>{children}</S.ContentSectionWrapper>
+                <div className="text-center max-w-xl m-auto flex flex-col gap-5 justify-center items-center">
+                    {children}
+                </div>
             </Container>
-        </S.ContentSectionStyled>
+        </section>
     );
 };
