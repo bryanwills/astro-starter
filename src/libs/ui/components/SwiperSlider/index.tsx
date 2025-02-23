@@ -2,7 +2,7 @@ import React, { type FC, useMemo } from "react";
 
 import { SwiperSlide } from "swiper/react";
 import type { SwiperOptions, SwiperModule } from "swiper/types";
-import * as S from "./styled";
+import { Swiper } from "swiper/react";
 
 type SwiperSliderProps = {
     children: React.ReactNode;
@@ -42,7 +42,7 @@ export const SwiperSlider: FC<SwiperSliderProps> = ({
     );
 
     return (
-        <S.SwiperStyled
+        <Swiper
             // default values for the slider
             modules={modules}
             slidesPerView={3}
@@ -52,6 +52,6 @@ export const SwiperSlider: FC<SwiperSliderProps> = ({
             {...rest}
         >
             {memoChildren}
-        </S.SwiperStyled>
+        </Swiper>
     );
 };

@@ -13,6 +13,7 @@ export default defineConfig({
     site: siteUrl + "/",
 
     integrations: [
+        tailwind(),
         react(),
         svgr(),
         sitemap({
@@ -40,9 +41,6 @@ export default defineConfig({
                 // }
                 return item;
             },
-        }),
-        tailwind({
-            configFile: "./tailwind.config.js",
         }),
     ],
     renderers: ["@astrojs/renderer-react"],

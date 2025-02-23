@@ -1,5 +1,3 @@
-const Colors = require("./src/styles/colors").Colors;
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -15,9 +13,9 @@ module.exports = {
         },
         extend: {
             colors: {
-                primary: Colors.primary,
-                secondary: Colors.secondary,
-                tertiary: Colors.tertiary,
+                primary: "#fff",
+                secondary: "#000",
+                tertiary: "#000",
             },
             fontSize: {
                 h1: ["60px", "1.2"],
@@ -52,4 +50,5 @@ module.exports = {
             },
         },
     },
+    plugins: [],
 };

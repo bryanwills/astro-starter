@@ -1,7 +1,5 @@
 ---
-import { ContentSection } from "@blocks/ContentSection";
 import Layout from "../layouts/Layout.astro";
-import { Button } from "@components/Button";
 ---
 
 <Layout
@@ -9,14 +7,6 @@ import { Button } from "@components/Button";
     description="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
 >
     <main class="page-content">
-        <ContentSection>
-            <h1>Wooops - Sorry! 404</h1>
-            <p>
-                The page you are looking for might have been removed, had its
-                name changed, or is temporarily unavailable.
-            </p>
-
-            <Button variant="primary" link="/" align="center"> Go back </Button>
-        </ContentSection>
+        <h1>404</h1>
     </main>
 </Layout>

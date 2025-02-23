@@ -1,29 +1,16 @@
 ---
-import { Hero } from "@blocks/Hero";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@libs/layouts/Layout.astro";
 ---
 
-<Layout title="CHANGEME" description="YOUR META DESCRIPTION FOR SEO">
-    <main class="page-content">
-        <Hero
-            heroType="center"
-            data={{
-                title: `This is astro starter`,
-                description: `This is a starter template for Astro`,
-                image: "heroImg",
-                buttons: [
-                    {
-                        text: "Get Started",
-                        link: "/",
-                        variant: "primary",
-                    },
-                    {
-                        text: "Learn More",
-                        link: "/",
-                        variant: "secondary",
-                    },
-                ],
-            }}
-        />
+<Layout
+    title="Welcome to Astro"
+    description="Welcome to Astro + React + Tailwind"
+>
+    <main
+        class="min-h-screen bg-gray-100 flex flex-col items-center justify-center gap-4"
+    >
+        <h1 class="text-4xl font-bold text-blue-600">
+            Welcome to Astro + React + Tailwind
+        </h1>
     </main>
 </Layout>
