@@ -1,42 +1,24 @@
 import { type FC } from "react";
 
-interface Command {
-    command: string;
-    npm: string;
-    yarn: string;
-    description: string;
-}
+type CommandsProps = {
+    headers: {
+        title: string;
+    }[];
+    commands: {
+        command: string;
+        npm: string;
+        yarn: string;
+        description: string;
+    }[];
+};
 
-export const Commands: FC = () => {
-    const commands: Command[] = [
-        {
-            command: "Install",
-            npm: "npm install",
-            yarn: "yarn install",
-            description: "Installs dependencies",
-        },
-        {
-            command: "Dev",
-            npm: "npm run dev",
-            yarn: "yarn dev",
-            description: "Starts local dev server at localhost:4321",
-        },
-        {
-            command: "Build",
-            npm: "npm run build",
-            yarn: "yarn build",
-            description: "Build your production site to ./dist/",
-        },
-        {
-            command: "Preview",
-            npm: "npm run preview",
-            yarn: "yarn preview",
-            description: "Preview your build locally, before deploying",
-        },
-    ];
+export const Commands: FC<CommandsProps> = ({ commands, headers }) => {
+    if (!commands.length) {
+        return null;
+    }
 
     return (
-        <section className="py-20 px-4 bg-secondary">
+        <section className="my-20 px-4 bg-secondary">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-h2-md md:text-h2 text-primary text-center mb-16">
                     Commands
@@ -45,10 +27,14 @@ export const Commands: FC = () => {
                     <table className="w-full text-left">
                         <thead>
                             <tr className="border-b border-primary/10">
-                                <th className="p-4 text-primary">Command</th>
-                                <th className="p-4 text-primary">npm</th>
-                                <th className="p-4 text-primary">yarn</th>
-                                <th className="p-4 text-primary">Action</th>
+                                {headers.map((header, index) => (
+                                    <th
+                                        className="p-4 text-primary"
+                                        key={index}
+                                    >
+                                        {header.title}
+                                    </th>
+                                ))}
                             </tr>
                         </thead>
                         <tbody>

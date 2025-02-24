@@ -3,11 +3,11 @@ import "./global.css";
 import { PreviewPng } from "@static/images";
 import MetaConfig from "./MetaConfig.astro";
 
-interface Props {
+type Props = {
     title: string;
     description: string;
     overwritePreview?: string;
-}
+};
 
 const { title, description, overwritePreview } = Astro.props;
 ---
@@ -20,7 +20,6 @@ const { title, description, overwritePreview } = Astro.props;
             description={description}
             preview={overwritePreview ? overwritePreview : PreviewPng.src}
         />
-        <title>{title}</title>
     </head>
     <body class="bg-secondary">
         <slot />

@@ -1,5 +1,4 @@
 import React, { type FC, useMemo } from "react";
-
 import { SwiperSlide } from "swiper/react";
 import type { SwiperOptions, SwiperModule } from "swiper/types";
 import { Swiper } from "swiper/react";

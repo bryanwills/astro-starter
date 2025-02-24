@@ -1,16 +1,19 @@
 import { type FC } from "react";
 import { ArrowRight } from "lucide-react";
 
-export const Hero: FC = () => {
+type HeroProps = {
+    title: string;
+    description: string;
+};
+
+export const Hero: FC<HeroProps> = ({ title, description }) => {
     return (
         <div className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 bg-secondary">
             <h1 className="text-h1-md md:text-h1 font-bold text-primary mb-6">
-                🚀 Modern Astro Starter Template
+                {title}
             </h1>
             <p className="text-p-md md:text-p max-w-2xl text-primary/80 mb-8">
-                A performance-driven starter template integrating Astro with
-                React, designed for static site generation with dynamic UI
-                components.
+                {description}
             </p>
             <div className="flex gap-4">
                 <a

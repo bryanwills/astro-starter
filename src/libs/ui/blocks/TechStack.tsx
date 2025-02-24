@@ -1,88 +1,42 @@
 import { type FC } from "react";
-import { Zap, Palette, Code, FileCode, ShieldCheck } from "lucide-react";
+import { Zap } from "lucide-react";
 
 type TechItem = {
     name: string;
     description: string;
     link: string;
-    Icon: typeof Zap;
     benefits: string[];
 };
 
-export const TechStack: FC = () => {
-    const technologies: TechItem[] = [
-        {
-            name: "Astro",
-            description: "Modern Static Site Generator with partial hydration",
-            link: "https://astro.build/",
-            Icon: Zap,
-            benefits: [
-                "Zero-JS by default for better performance",
-                "Partial hydration for interactive components",
-                "Built-in image optimization",
-                "Automatic sitemap generation",
-            ],
-        },
-        {
-            name: "React",
-            description: "Component-Based UI library",
-            link: "https://reactjs.org/",
-            Icon: Code,
-            benefits: [
-                "Component-driven development",
-                "Rich ecosystem of libraries",
-                "Strong community support",
-                "Reusable UI components",
-            ],
-        },
-        {
-            name: "Tailwind CSS",
-            description: "Utility-First CSS Framework",
-            link: "https://tailwindcss.com/",
-            Icon: Palette,
-            benefits: [
-                "Rapid UI development",
-                "No CSS file maintenance",
-                "Consistent design system",
-                "Built-in responsive design",
-            ],
-        },
-        {
-            name: "Lucide React",
-            description: "Beautiful & consistent icons",
-            link: "https://lucide.dev/",
-            Icon: FileCode,
-            benefits: [
-                "Lightweight SVG icons",
-                "Tree-shakeable imports",
-                "Consistent design language",
-                "TypeScript support",
-            ],
-        },
-        {
-            name: "TypeScript",
-            description: "Type Safety & Enhanced Developer Experience",
-            link: "https://www.typescriptlang.org/",
-            Icon: ShieldCheck,
-            benefits: [
-                "Type safety across the project",
-                "Better IDE support",
-                "Reduced runtime errors",
-                "Enhanced code maintainability",
-            ],
-        },
-    ];
+type TechStackProps = {
+    technologies: TechItem[];
+    title?: string;
+    description?: string;
+};
+
+export const TechStack: FC<TechStackProps> = ({
+    technologies,
+    title,
+    description,
+}) => {
+    if (!technologies.length) {
+        return null;
+    }
 
     return (
-        <section className="py-20 px-4 bg-secondary">
+        <section className="my-20 px-4 bg-secondary">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-h2-md md:text-h2 text-primary text-center mb-4">
-                    Tech Stack
-                </h2>
-                <p className="text-primary/80 text-center max-w-2xl mx-auto mb-16">
-                    Carefully selected technologies for the best developer
-                    experience and performance
-                </p>
+                {title && (
+                    <h2 className="text-h2-md md:text-h2 text-primary text-center mb-4">
+                        {title}
+                    </h2>
+                )}
+                {description && (
+                    <p className="text-primary/80 text-center max-w-2xl mx-auto mb-16">
+                        Carefully selected technologies for the best developer
+                        {description}
+                    </p>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {technologies.map((tech) => (
                         <div
@@ -90,7 +44,6 @@ export const TechStack: FC = () => {
                             className="bg-primary/5 rounded-xl p-8 hover:bg-primary/10 transition-all"
                         >
                             <div className="flex items-center gap-3 mb-4">
-                                <tech.Icon size={24} className="text-primary" />
                                 <a
                                     href={tech.link}
                                     target="_blank"

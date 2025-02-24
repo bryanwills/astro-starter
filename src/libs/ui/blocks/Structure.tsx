@@ -8,67 +8,20 @@ type FileItem = {
     items?: FileItem[];
 };
 
-export const Structure: FC = () => {
-    const structure: FileItem[] = [
-        {
-            name: "src",
-            type: "folder",
-            items: [
-                {
-                    name: "layouts",
-                    type: "folder",
-                    description: "Base layouts and SEO meta configurations",
-                },
-                {
-                    name: "libs",
-                    type: "folder",
-                    items: [
-                        {
-                            name: "ui",
-                            type: "folder",
-                            description:
-                                "All components, blocks, modules - reusable elements",
-                            items: [
-                                { name: "blocks", type: "folder" },
-                                { name: "components", type: "folder" },
-                                { name: "modules", type: "folder" },
-                            ],
-                        },
-                    ],
-                },
-                {
-                    name: "pages",
-                    type: "folder",
-                    description: "Astro pages (each file maps to a route)",
-                },
-                {
-                    name: "static",
-                    type: "folder",
-                    description: "All static assets - images, icons, fonts",
-                },
-            ],
-        },
-        {
-            name: "public",
-            type: "folder",
-            description: "Public assets (served as-is)",
-        },
-        {
-            name: "astro.config.mjs",
-            type: "file",
-            description: "Astro configuration",
-        },
-        {
-            name: "tailwind.config.js",
-            type: "file",
-            description: "Tailwind configuration",
-        },
-        {
-            name: "tsconfig.json",
-            type: "file",
-            description: "TypeScript configuration",
-        },
-    ];
+type StructureProps = {
+    items: FileItem[];
+    title?: string;
+    description?: string;
+};
+
+export const Structure: FC<StructureProps> = ({
+    items,
+    title,
+    description,
+}) => {
+    if (!items.length) {
+        return null;
+    }
 
     const renderItem = (item: FileItem, depth = 0) => {
         const Icon = item.type === "folder" ? Folder : File;
@@ -103,18 +56,21 @@ export const Structure: FC = () => {
     };
 
     return (
-        <section className="py-20 px-4 bg-secondary">
+        <section className="my-20 px-4 bg-secondary">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-h2-md md:text-h2 text-primary text-center mb-4">
-                    Project Structure
-                </h2>
-                <p className="text-primary/80 text-center max-w-2xl mx-auto mb-16">
-                    Organized using a libs system for better modularity and
-                    scalability
-                </p>
+                {title && (
+                    <h2 className="text-h2-md md:text-h2 text-primary text-center mb-4">
+                        {title}
+                    </h2>
+                )}
+                {description && (
+                    <p className="text-primary/80 text-center max-w-2xl mx-auto mb-16">
+                        {description}
+                    </p>
+                )}
                 <div className="bg-primary/5 rounded-xl p-8">
                     <div className="flex flex-col gap-4">
-                        {structure.map((item) => renderItem(item))}
+                        {items.map((item) => renderItem(item))}
                     </div>
                 </div>
             </div>

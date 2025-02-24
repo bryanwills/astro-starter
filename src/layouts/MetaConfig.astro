@@ -1,13 +1,13 @@
 ---
 import { siteUrl } from "@astro.config.mjs";
 
-interface Props {
+type Props = {
     title: string;
     description: string;
     preview: string;
-}
+};
 
-const { title, description, preview } = Astro.props;
+const { title, description, preview }: Props = Astro.props;
 
 /**
  * keep whole metadata in one place
@@ -72,3 +72,5 @@ const metaData = {
 <meta name="twitter:image" content={metaData.twitter.image as string} />
 <meta property="twitter:domain" content={metaData.twitter.domain} />
 <meta property="twitter:url" content={metaData.twitter.url} />
+
+<title>{title}</title>
