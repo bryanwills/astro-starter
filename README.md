@@ -1,24 +1,49 @@
 # 🚀 CODEXCODE ASTRO STARTER
 
-![Agency Aestro Template Page](/src/static/images/preview.webp)
 [<img src="/src/static/images/link-live.png">](https://www.codexcode.store/)
 [<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/pages/contact)
 
-## 💻 Tech Stack
+## 📚 Overview
 
-Astro.build + React + Emotion + custom variables
+A modern, performance-driven starter template integrating **Astro** with **React**, designed for static site generation with dynamic UI components. This template ensures a seamless developer experience while optimizing for speed and **SEO**.
+
+## 🎨 Tech Stack
+
+-   [**Astro**](https://astro.build/) - Static Site Generator
+-   [**React**](https://reactjs.org/) - Component-Based UI
+-   [**Tailwind CSS**](https://tailwindcss.com/) - Utility-First Styling
+-   [**Lucide React**](https://lucide.dev/) - SVG Icons
+-   [**TypeScript**](https://www.typescriptlang.org/) - Type Safety & Enhanced DX
+
+## 🗂️ Project Structure
+
+To maintain clarity and scalability, we organize the project using a **libs system**. This ensures reusability and a modular architecture.
+
+```
+├── src/
+│   ├── layouts/           # Base layouts such as the **MainLayout** and **SEO meta configurations**.
+│   ├── libs/
+│   │   ├── ui/             # All components, blocks, modules - whole structure of the reusable elements that you can use in your project.
+│   ├── pages/             # Astro pages (each file maps to a route)
+│   ├── static/            # All static assets - images, icons, fonts, etc.
+├── public/                # Public assets (served as-is)
+├── astro.config.mjs       # Astro configuration
+├── tailwind.config.js     # Tailwind configuration
+├── tsconfig.json          # TypeScript configuration
+```
 
 ### ⚡️ Why like this?
 
 **Astro.build** is a modern front-end framework that allows you to build faster, optimized websites. It's compatible with React, which is a popular library for building user interfaces.
 
-**Tailwind** - Tailwind is great, this give us faster coding results that using only CSS-IN-JS, Its great, but like others tools, it have his own limits & thats why we use **Emotions**
+**Tailwind** -A utility-first approach ensures rapid UI development without writing excessive custom CSS.
 
-**Emotion** is a performant and flexible CSS-in-JS library, which lets you write CSS styles with JavaScript - This with Emotions allows us to create everything in minutes - reason why we using emotions with Tailwind is simple, when you have more "difficult" block to write, its better to split some code between **Emotions** & **Tailwind**
+## 📈 Performance Best Practices
 
-## ⚠️ How to keep good performance?
-
-If you make modifications, such as adding an image, ensure that the image is saved in .WEBP format and is of a small size. Avoid using large images as they can negatively impact performance. You can use [TinyPNG](https://tinypng.com/) to compress your images.
+-   Use **.WEBP format** for images to reduce file size.
+-   Optimize assets with tools like [**TinyPNG**](https://tinypng.com/).
+-   Self-host fonts instead of using Google Fonts to improve load times.
+-   Keep the HTML structure **lightweight** to ensure fast rendering.
 
 ## 🎨 Static Media
 
@@ -30,6 +55,8 @@ If you make modifications, such as adding an image, ensure that the image is sav
   @example
   <Image src="logo" alt="logo" width="50px" height="50px" />
 ```
+
+You can use your own icons or use Lucide React icons - its up to you
 
 -   icons - Icons are SVG files that you can use in React components, import all you'r icons in static/index.tsx and use it with
 
@@ -50,88 +77,45 @@ also you can check if there is any CHANGEME or YOUR META DESCRIPTION FOR SEO - i
 
 **Robots** - Also its generated automatically.
 
-## 📞 Contact Form
+## 🏗️ Key Directories Explained
 
-If there is any form with **ZOD** & **API CALLS**
+### `/src/layouts`
 
-For contact form you need to replace those **ID** with the correct one.
-API: https://emailjs.com
-Other solution: If you want to add other solution, then change axios request with other solution - should work
+Houses base layouts such as the **MainLayout** and **SEO meta configurations**.
 
-```
-    service_id: "service_ID", -
-    template_id: "template_TEMPLATE_ID",
-    user_id: "USER_ID",
-```
+### `/src/ui`
 
-## 🎨 Styles
+All components, blocks, modules - whole structure of the reusable elements that you can use in your project.
 
-All global styles like, colors, fonts, normalize or things like mediaQuery are stored in styles folder,
+### `/src/pages`
 
-With **Emotions** We create a MediaQuery function that allows us to create mobile styling easily.
-MediaQuery can be used with MIN & MAX OR BETWEEN - that means code will display depends on what we need to do:
+Astro pages that **automatically generate routes** without the need for additional configurations.
 
-```
-    @returns @media example: (min-width: 768px)
-    ${MediaQuery.min(breakpoint)} {
-        //code
-    }
-```
+### `/src/libs/static`
 
-```
-    @returns @media example: (min-width: 768px)
-    ${MediaQuery.max(breakpoint)} {
-        //code
-    }
-```
+All static assets - images, icons, fonts, etc.
 
-```
-    @returns @media example: (min-width: 768px) and (max-width: 991px)
-    ${MediaQuery.between("breakpoint1", "breakpoint2")} {
-        //code
-    }
-```
-
-All colors are used as css var to have easier access in app
-
-Rest code CSS is made with Emotions - read [Emotions docs](https://emotion.sh/docs/introduction) to understand how its working.
-
-Here we use Emotions with Tailwind, so you don't need to create css file for some extra styling, use Emotions for that!
-
-## ⚠️ Tailwind
-
-Emotions should work with
-
-```
-yarn dev or npm run dev
-```
-
-but if this for some reason don't work - use this
-
-```
-npx tailwindcss -i ./src/styles/tailwind/tailwind.css -o ./src/styles/tailwind/tailwind.output.css --watch
-```
-
-this will create instance in CMD and it will watch for all tailwind changes.
+also images and icons are setup with typescript (examples you can find in above section)
 
 ## 🧞 Commands
 
 #### All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                   | npm Command               | yarn Command           | Action                                           |
+| :------------------------ | :------------------------ | :--------------------- | :----------------------------------------------- |
+| `npm install`             | `npm install`             | `yarn install`         | Installs dependencies                            |
+| `npm run dev`             | `npm run dev`             | `yarn dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | `npm run build`           | `yarn build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | `npm run preview`         | `yarn preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | `npm run astro ...`       | `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | `npm run astro -- --help` | `yarn astro -- --help` | Get help using the Astro CLI                     |
 
 ## 📞🧞 Contact & Support
 
-If you bought our theme, you get 100% our support!
-have any problems or questions, please let us know here: [Contact Form](https://www.codexcode.store/pages/contact)
+[@contact](https://www.codexcode.store/contact) - for any questions or support
+
+also if you want to fast contact with us, you can use our [Discord Server](https://discord.gg/kpYgj5cw)
 
 ## 🧞 Authors
 
--   [@codexcode](https://www.codexcode.pl)
+-   [@codexcode](https://www.codexcode.store)

@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import svgr from "vite-plugin-svgr";
 import tailwind from "@astrojs/tailwind";
 
-export const siteUrl = "https://codexcode.store";
+export const siteUrl = "http://localhost:4321";
 
 const date = new Date().toISOString();
 // https://astro.build/config

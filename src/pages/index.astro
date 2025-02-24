@@ -1,16 +1,23 @@
 ---
-import Layout from "@libs/layouts/Layout.astro";
+import Layout from "layouts/Layout.astro";
+import { Hero } from "@libs/ui/blocks/Hero";
+import { Structure } from "@libs/ui/blocks/Structure";
+import { TechStack } from "@libs/ui/blocks/TechStack";
+import { Features } from "@libs/ui/blocks/Features";
+import { Commands } from "@libs/ui/blocks/Commands";
+import { ContactButton } from "@libs/ui/components/ContactButton";
 ---
 
 <Layout
-    title="Welcome to Astro"
-    description="Welcome to Astro + React + Tailwind"
+    title="Astro Starter Template"
+    description="A modern, performance-focused starter template combining Astro with React"
 >
-    <main
-        class="min-h-screen bg-gray-100 flex flex-col items-center justify-center gap-4"
-    >
-        <h1 class="text-4xl font-bold text-blue-600">
-            Welcome to Astro + React + Tailwind
-        </h1>
+    <main class="bg-secondary">
+        <Hero client:load />
+        <Structure client:visible />
+        <TechStack client:visible />
+        <Features client:visible />
+        <Commands client:visible />
+        <ContactButton client:visible />
     </main>
 </Layout>

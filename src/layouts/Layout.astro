@@ -1,6 +1,6 @@
 ---
 import "./global.css";
-import { PreviewPng } from "@libs/static/images";
+import { PreviewPng } from "@static/images";
 import MetaConfig from "./MetaConfig.astro";
 
 interface Props {
@@ -15,10 +15,6 @@ const { title, description, overwritePreview } = Astro.props;
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
         <MetaConfig
             title={title}
             description={description}
