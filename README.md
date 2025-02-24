@@ -1,7 +1,12 @@
 # 🚀 CODEXCODE ASTRO STARTER
 
-[<img src="/src/static/images/link-live.png">](https://www.codexcode.store/)
-[<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/contact)
+## 📚 Changes
+
+This Boilerplate will be updated with new features and improvements.
+
+If you want us to change or add something, please contact us on our [Discord Server](https://discord.gg/kpYgj5cw)
+
+Have fun!
 
 ## 📚 Overview
 
