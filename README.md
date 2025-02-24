@@ -1,7 +1,7 @@
 # 🚀 CODEXCODE ASTRO STARTER
 
 [<img src="/src/static/images/link-live.png">](https://www.codexcode.store/)
-[<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/pages/contact)
+[<img src="/src/static/images/link-contact.png">](https://www.codexcode.store/contact)
 
 ## 📚 Overview
 
