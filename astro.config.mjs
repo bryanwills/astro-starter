@@ -3,7 +3,6 @@ import react from "@astrojs/react";
 import CompressionPlugin from "vite-plugin-compression";
 import sitemap from "@astrojs/sitemap";
 import svgr from "vite-plugin-svgr";
-import tailwind from "@astrojs/tailwind";
 
 export const siteUrl = "http://localhost:4321";
 
@@ -13,7 +12,6 @@ export default defineConfig({
     site: siteUrl + "/",
 
     integrations: [
-        tailwind(),
         react(),
         svgr(),
         sitemap({
